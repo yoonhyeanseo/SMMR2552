@@ -1,0 +1,232 @@
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* 알아서 최대 길이안에 요소가 비율에 맞춰서 계산되도록하는 함수 */
+}
+
+body {
+  max-width: 800px;
+  /* 웹의 요소들의 최대 가로길이 지정 */
+  margin-inline: auto;
+  /* 양옆 여백 자동으로 지정 */
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  margin-block: 10px 10px;
+  /* 위아래 여백 10px 지정 */
+}
+
+.purple {
+  color: oklch(60% 0.2 300);
+}
+
+.orange {
+  color: oklch(80% 0.2 50);
+}
+
+h3 {
+  margin-block: 0 10px;
+}
+.container {
+  background-color: oklch(90% 0.05 200);
+  padding-inline: 20px;
+  margin-bottom: 40px;
+}
+
+.item {
+  border: 2px solid oklch(60% 0.05 30);
+  /* border 는 테두리를 설정 solid는 실선을 생성  */
+  background-color: oklch(90% 0.05 30);
+  padding: 10px;
+}
+
+.green {
+  background-color: oklch(90% 0.05 150);
+}
+
+.flex {
+  display: flex;
+  /* flexbox 레이아웃으로 지정 */
+}
+
+.wrap {
+  flex-wrap: wrap;
+  /* 요소들이 컨테이너를 벗어나면 다음 줄로 넘어가도록 설정 */
+}
+
+.grid {
+  display: grid;
+  /* grid 레이아웃으로 지정 */
+}
+
+.gtc {
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+  /* 5개의 열을 생성하고 두번째 열이 다른 열보다 2배 넓도록 설정 */
+}
+
+.gtc-1fr {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  /* 5개의 열을 동일한 비율로 설정 */
+}
+
+.gtc-100 {
+  grid-template-columns: 100px 100px 100px 100px 100px;
+  /* 5개의 열을 각각 100px로 고정 */
+}
+
+.gtr {
+  grid-template-rows: 1fr 2fr 1fr 1fr 1fr;
+  /* 5개의 행을 생성하고 두번째 행이 다른 행보다 2배 넓도록 설정 */
+}
+
+.gtr-1fr {
+  grid-template-rows: repeat(5, 1fr);
+  /* 5개의 행을 동일한 비율로 설정 */
+}
+
+.h300 {
+  height: 300px;
+  /* 컨테이너의 높이를 300px로 설정 */
+}
+
+.w100 {
+  width: 100px;
+  /* 컨테이너의 너비를 100px로 설정 */
+}
+
+.ac {
+  align-content: center;
+  /* 여러 줄의 아이템들을 컨테이너의 중앙에 정렬 */
+}
+
+.ai {
+  align-items: center;
+  /* 각 아이템들을 컨테이너의 중앙에 정렬 */
+}
+
+.jc {
+  justify-content: space-between;
+  /* 아이템들 사이에 균등한 간격을 둠 */
+}
+
+.ji {
+  justify-items: center;
+  /* 각 아이템들을 컨테이너의 중앙에 정렬 */
+}
+
+.gap {
+  gap: 10px;
+  /* 아이템들 사이에 10px 간격을 둠 */
+}
+
+.dir {
+  flex-direction: column-reverse;
+  /* 아이템들을 세로 방향으로 역순 정렬 */
+}
+
+.as-1 {
+  align-self: start;
+  /* 개별 아이템을 컨테이너의 시작 부분에 정렬 */
+}
+.as-2 {
+  align-self: center;
+  /* 개별 아이템을 컨테이너의 중앙에 정렬 */
+}
+.as-3 {
+  align-self: end;
+}
+.as-4 {
+  align-self: stretch;
+  /* 개별 아이템을 컨테이너의 끝 부분에 정렬 */
+}
+.as-5 {
+  align-self: baseline;
+  /* 개별 아이템을 컨테이너의 기준선에 정렬 */
+}
+
+.order-1 {
+  order: 1;
+  /* 아이템의 순서를 첫 번째로 설정 */
+}
+.order-2 {
+  order: 2;
+}
+.order-3 {
+  order: 3;
+}
+.order-4 {
+  order: 4;
+}
+.order-5 {
+  order: 5;
+}
+
+.grow-1 {
+  flex-grow: 1;
+  /* 아이템이 남은 공간을 균등하게 차지하도록 설정 */
+}
+.grow-2 {
+  flex-grow: 2;
+}
+
+.shrink-1 {
+  width: 200px;
+  flex-shrink: 1;
+  /* 아이템이 컨테이너보다 커질 때 줄어드는 비율 설정 */
+}
+.shrink-2 {
+  width: 200px;
+  flex-shrink: 2;
+}
+
+.basis-1 {
+  flex-basis: 300px;
+  /* 아이템의 기본 크기를 300px로 설정 */
+}
+.basis-2 {
+  flex-basis: 0;
+  /* 아이템의 기본 크기를 0으로 설정 */
+}
+
+/* 선배 도움 plz */
+
+.gc-gr {
+  grid-column: 2 / 4;
+  /* 아이템이 2번째 열에서 4번째 열까지 차지하도록 설정 */
+  grid-row: 3 / 6;
+  /* 아이템이 3번째 행에서 6번째 행까지 차지하도록 설정 */
+}
+
+.ga {
+  grid-area: 3 / 2 / 6 / 4;
+  /* 아이템이 3번째 행에서 6번째 행까지, 2번째 열에서 4번째 열까지 차지하도록 설정 */
+}
+
+.js-s {
+  justify-self: start;
+  /* 개별 아이템을 컨테이너의 시작 부분에 정렬 */
+}
+.js-c {
+  justify-self: center;
+}
+.js-e {
+  justify-self: end;
+}
+.js-str {
+  justify-self: stretch;
+}
+
+.subgrid {
+  grid-area: 3 / 2 / 6 / 4;
+  /* 아이템이 3번째 행에서 6번째 행까지, 2번째 열에서 4번째 열까지 차지하도록 설정 */
+  display: grid;
+  /* 하위 그리드 레이아웃으로 지정 */
+  grid-template-columns: subgrid;
+  /* 상위 그리드의 열 정의를 상속 */
+  grid-template-rows: subgrid;
+  /* 상위 그리드의 행 정의를 상속 */
+}
